@@ -2,23 +2,23 @@ package main;
 
 public class Home {
 	
-	public Home()
+	public Home(String NAME, String place, String command, String[] inputs)
 	{
 		if (place== "Home") {
 			System.out.println(NAME + " is at their home... It's a dump.");
 			System.out.println("What does " + NAME + " wanna do?!");
 
-			command= checkInput(inputs, command);
+			command= TextGame.checkInput(inputs);
 			if (command== "visit") {
-				place= visit(place);
+				TextGame.visit(place);
 			}
 
 			if (command== "help") {
-				help();
+				TextGame.help();
 			}
 
 			if (command== "check inventory") {
-				checkInventory();
+				Inventory.checkInv(NAME);
 			}
 
 			if (command== "look") {
@@ -28,14 +28,12 @@ public class Home {
 			if (command== "use") {
 				System.out.println("What are you gonna use " + NAME + "?");
 
-				String[] houseObjects;
-
-				if (!(hasItem("libraryPass"))) {
-					houseObjects= {"book","record player","plastic bowl","tv","dead plant","library card","cave passage"};
-					command= checkInput(houseObjects);
-				} else if (hasItem("libraryPass")) {
-					houseObjects= {"book","record player","plastic bowl","tv","dead plant","cave passage"};
-					command= checkInput(houseObjects);
+				if (!(Inventory.hasItem("libraryPass"))) {
+					String[] houseObjects = {"book","record player","plastic bowl","tv","dead plant","library card","cave passage"};
+					command= TextGame.checkInput(houseObjects);
+				} else if (Inventory.hasItem("libraryPass")) {
+					String[] houseObjects =  {"book","record player","plastic bowl","tv","dead plant","cave passage"};
+					command= TextGame.checkInput(houseObjects);
 				}
 
 				if (interactWith== "cave passage") {
@@ -49,11 +47,11 @@ public class Home {
 				} else if (interactWith== "tv") {
 					System.out.println(NAME + " turns on the tv and Spongebob appears on the screen!");
 				} else if (interactWith== "dead plant") {
-					System.out.println(NAME + " smells the dead plant... Why " + NAME + " is doing this I have no clue ¯\_(ツ)_/¯");
+					System.out.println(NAME + " smells the dead plant... Why " + NAME + " is doing this I have no clue");
 				} else if (interactWith== "library card") {
-					if (!(hasItem("library card"))) {
+					if (!(Inventory.hasItem("library card"))) {
 						System.out.println(NAME + " has picked up the library card.");
-						addItemToInv("libraryPass");
+						Inventory.addItemToInv("libraryPass", NAME);
 					}
 				}
 

@@ -27,7 +27,7 @@ public class Inventory {
 		if(hasItem(item));
 		else {
 			inventory.add(item);
-			System.out.println(item + " has been added to " + NAME + " /'s inventory");
+			System.out.println(item + " has been added to " + NAME + "'s inventory.");
 		}
 	}
 	

@@ -14,15 +14,15 @@ public class FriendsHouse {
 	}
 	
 	static void HouseMain(String NAME, String[] inputs){
-		String interactWith;
+		String PLACE = "friendsHouse";
 		
 		String command = TextGame.checkInput(inputs);
 		switch (command) {
 			case "use":
 				System.out.println("What are you going to use: ?");
-				interactWith = TextGame.checkInput(friendsHouseObjects);
+				command = TextGame.checkInput(friendsHouseObjects);
 				
-				switch (interactWith) {
+				switch (command) {
 					case "dresser":
 						System.out.println("Wow, you're nosy. You walk over to his dresser and try"
 								+ " to open a drawer.");
@@ -36,7 +36,7 @@ public class FriendsHouse {
 								+ "ed it's fake.");
 					case "door":
 						System.out.println("You exit into the townSquare.");
-						TownSquare.TownSquare(NAME, "friendsHouse", command, inputs);
+						TownSquare.TownSquare(NAME, PLACE, command, inputs);
 					default:
 						HouseMain(NAME, inputs);
 				}

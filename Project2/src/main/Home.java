@@ -30,10 +30,10 @@ public class Home {
 
 				if (!(Inventory.hasItem("libraryPass"))) {
 					String[] houseObjects = {"book","record player","plastic bowl","tv","dead plant","library card","cave passage"};
-					command= TextGame.checkInput(houseObjects);
+					interactWith= TextGame.checkInput(houseObjects);
 				} else if (Inventory.hasItem("libraryPass")) {
 					String[] houseObjects =  {"book","record player","plastic bowl","tv","dead plant","cave passage"};
-					command= TextGame.checkInput(houseObjects);
+					interactWith= TextGame.checkInput(houseObjects);
 				}
 
 				if (interactWith== "cave passage") {

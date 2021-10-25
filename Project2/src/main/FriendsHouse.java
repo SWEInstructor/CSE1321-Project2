@@ -1,65 +1,47 @@
 package main;
 
-public class FriendsHouse {
+public class TownSquare {
+	
+	public TownSquare(String NAME, String place, String command, String[] inputs)
+	{
+		if (place.equals("townSquare")){
+			System.out.println("You walk into the town square and see a farmer's stand and a flower stall.");
+			System.out.println("So, what are you doing now?: ");
 
-	static String[] friendsHouseObjects = {
-			"dresser", "plant", "door"
-		};
-	
-	
-	static void Houseinit() {
-		String PLACE = "friendsHouse";
-		System.out.println("You walk into your friend's house.");
-		System.out.println("What are you even doing in here?: ");
-	}
-	
-	static void HouseMain(String NAME, String[] inputs){
-		String PLACE = "friendsHouse";
-		
-		String command = TextGame.checkInput(inputs);
-		switch (command) {
-			case "use":
-				System.out.println("What are you going to use: ?");
-				command = TextGame.checkInput(friendsHouseObjects);
-				
-				switch (command) {
-					case "dresser":
-						System.out.println("Wow, you're nosy. You walk over to his dresser and try"
-								+ " to open a drawer.");
-						System.out.println("The drawer won't open because the game developers are "
-								+ "poor college kids who don't have enough time to code something "
-								+ "inside.");
-						break;
-					case "plant":
-						System.out.println("At first you were impressed your friend could keep a p"
-								+ "lant alive longer than you did, but when you pick it you realiz"
-								+ "ed it's fake.");
-					case "door":
-						System.out.println("You exit into the townSquare.");
-						TownSquare.TownSquare(NAME, PLACE, command, inputs);
-					default:
-						HouseMain(NAME, inputs);
-				}
-				
-				break;
-				
-			case "look":
-				System.out.println("You see a dresser in the corner because you have eyes. You probably could snoop around in it since you have hands too.");
-			    System.out.println("You also spot a plant like the one at your house, only this one is actually alive.");
-				break;
-				
-			case "visit":
-				TextGame.visit(NAME);
-				break;
-				
-			case "check inventory":
-				Inventory.checkInv(NAME);
-				break;
-				
-			case "help":
+			command = TextGame.checkInput(inputs);
+
+			if (command.equals("visit")){
+				TextGame.visit(place);
+			}
+
+			if (command.equals("help")) {
 				TextGame.help();
-				break;				
-		}
-		HouseMain(NAME, inputs);
+			}
+
+			if (command.equals("look"))  {
+				System.out.println("Oh yeah, you can see your friend's house from here.");
+				System.out.println("But I already said, there's a flower stall and a farmer's stand here!");
+			}
+
+			if (command.equals("use"))   {
+				String action1;
+				System.out.println("Which one would you like to go to?: ");
+				String[] squareOptions = {"farmer's stand", "flower stall", "friend's house"};
+				action1 = TextGame.checkInput(squareOptions);
+				if (action1 == "farmer's stand")
+				{
+					System.out.println("You see the fruits and veggies the stand has but you're too broke to afford any of it.");
+				} else if (action1 == "flower stall") {
+					System.out.println("You look at all the different flowers at the stand. " + NAME + " should probably get their mom some flowers if they ever find the treasure.");
+				} else if (action1 == "friend's house") {
+					place = "friendsHouse";
+				}
+		      	}
+
+		      	if (command == "check inventory")   {
+				Inventory.checkInv(NAME);
+	    		}
+
+	    	}
 	}
 }

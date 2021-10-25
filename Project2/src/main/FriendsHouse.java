@@ -45,7 +45,7 @@ public class FriendsHouse {
 				
 			case "look":
 				System.out.println("You see a dresser in the corner because you have eyes. You probably could snoop around in it since you have hands too.");
-			    System.out.println("You also spot a plant like the one at your house, only this one is actually alive.");
+				System.out.println("You also spot a plant like the one at your house, only this one is actually alive.");
 				break;
 				
 			case "visit":

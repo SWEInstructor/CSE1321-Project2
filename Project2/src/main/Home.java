@@ -27,7 +27,8 @@ public class Home {
 
 			if (command== "use") {
 				System.out.println("What are you gonna use " + NAME + "?");
-
+				String interactWith;
+				
 				if (!(Inventory.hasItem("libraryPass"))) {
 					String[] houseObjects = {"book","record player","plastic bowl","tv","dead plant","library card","cave passage"};
 					interactWith= TextGame.checkInput(houseObjects);

@@ -36,7 +36,7 @@ public class FriendsHouse {
 								+ "ed it's fake.");
 					case "door":
 						System.out.println("You exit into the townSquare.");
-						TownSquare();
+						TownSquare.TownSquare(NAME, "friendsHouse", command, inputs);
 					default:
 						HouseMain(NAME, inputs);
 				}

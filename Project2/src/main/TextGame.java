@@ -48,16 +48,13 @@ public class TextGame {
 					"only to realize that they have nto spontaneously become able to do such a thing. They should really try to use the PASSAGE "+
 					"that they used to get in here in the first place.");
 			return place;
-		}
-		else if(command.equals("home")) {
+		} else if(command.equals("home")) {
 			System.out.println(NAME+" has decided to take a trip back to their home, probably to give up their useless and incredibly stupid adventure.");
 			return "home";
-		}
-		else if(command.equals("townSquare")) {
+		} else if(command.equals("townSquare")) {
 			System.out.println(NAME+" has decided to take a trip down to town Square, to see if they could find anything useful for their poor college student questing.");
 			return "townSquare";
-		}
-		else {
+		} else {
 			System.out.println(NAME+" has decided to take a trip down to the library, Probably because they've realized that they have no idea what they're supposed to be doing.");
 			return "libraryEntrance";
 		}
@@ -94,8 +91,7 @@ public class TextGame {
 			String gamePlay = sc.next();
 			if (gamePlay.equals("Y")) {
 				play = true;
-			}
-			else if(gameplay.equals("N")) {
+			} else if(gameplay.equals("N")) {
 				play = false;
 			}
 			

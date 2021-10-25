@@ -4,7 +4,7 @@ public class TownSquare {
 	
 	public TownSquare(String NAME, String place, String command, String[] inputs)
 	{
-		if (place == "townSquare"){
+		if (place.equal("townSquare")){
 			System.out.println("You walk into the town square and see a farmer's stand and a flower stall.");
 			System.out.println("So, what are you doing now?: ");
 

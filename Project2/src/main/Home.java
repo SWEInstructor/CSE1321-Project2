@@ -12,19 +12,15 @@ public class Home {
 			if (command== "visit") {
 				TextGame.visit(place);
 			}
-
 			if (command== "help") {
 				TextGame.help();
 			}
-
 			if (command== "check inventory") {
 				Inventory.checkInv(NAME);
 			}
-
 			if (command== "look") {
 				System.out.println(NAME + " see's a book, a record player, a dirty plastic bowl, a cracked tv, several dead plants, and a desk. There is a library card on the desk.");
 			}
-
 			if (command== "use") {
 				System.out.println("What are you gonna use " + NAME + "?");
 

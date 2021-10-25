@@ -2,7 +2,7 @@ package main;
 
 public class TownSquare {
 	
-	public TownSquare(String NAME, String place, String command, String[] inputs)
+	public static void townSquare(String NAME, String place, String command, String[] inputs)
 	{
 		if (place.equals("townSquare")){
 			System.out.println("You walk into the town square and see a farmer's stand and a flower stall.");

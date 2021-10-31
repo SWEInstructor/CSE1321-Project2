@@ -103,7 +103,7 @@ public class Cave {
 		}			
 	}
 }
-public class Test1 {
+public class TestCave {
 
 	static String NAME = "a";
 	static  String PLACE = "cave";

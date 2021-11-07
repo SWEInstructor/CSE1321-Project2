@@ -20,7 +20,7 @@
   	max-width: 100%;
   	height: auto;
 }
-div {
+.div-style {
 	width: 1150px;
 	padding-left: 150px;
 	margin-top: 85px;
@@ -43,3 +43,150 @@ tr, td {
 a.one:link {color:goldenrod;}
 a.one:visited {color:darkgoldenrod;}
 a.one:hover {color:gold;}
+.sprint-style {
+	font-size: 15px;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 100px;
+}
+.schedule-page-style {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.timeline {
+	width: 80%;
+	height: auto;
+	max-width: 1150px;
+	margin: 0 auto;
+	position: relative;
+}
+.timeline ul li {
+	list-style: none;
+}
+.timeline ul li {
+	padding: 20px;
+	background-color: #202020;
+	color: white;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+	margin-bottom: 0;
+}
+.content h2{
+	font-size: 25px;
+	font-weight: 500;
+	line-height: 0px;
+	margin-bottom: 10px;
+}
+.content p {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 300;
+}
+.timeline::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 4px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: grey;
+	margin-top:0;
+	padding-top: 0;
+}
+.timeline ul li {
+	width: 50%;
+	margin-bottom: 50px;
+	position: relative;
+}
+.timeline ul li:nth-child(odd) {
+	float: left;
+	clear: right;
+	transform: translateX(-90px);
+	border-radius: 10px 0px 10px 10px;
+}
+.timeline ul li:nth-child(even) {
+	float: right;
+	clear: left;
+	transform: translateX(50px);
+	border-radius: 0px 10px 10px 10px;
+}
+.timeline ul li::after {
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	background-color: #C0C0C0;
+	border-radius: 50%;
+	top: 0;
+}
+.timeline ul li:nth-child(odd)::after {
+	right: -30px;
+	transform: translate(50%,-50%);
+}
+.timeline ul li:nth-child(even)::after {
+	left:-30px;
+	transform: translate(-50%,-50%);
+}
+.timeline ul li:hover:after {
+	background-color: darkgoldenrod;
+}
+.week {
+	font-size: 15px;
+	font-style: bold;
+}
+.weekly-role {
+	font-size: 16px;
+	height: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right: 50px;
+	position: absolute;
+	top: 25px;
+	margin-bottom: 0;
+	border-radius: 2px;
+	font-size: 15px;
+}
+.symbol {
+	font-size: 10px;
+	height: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right: 30px;
+	position: absolute;
+	top: 25px;
+	margin-bottom: 0;
+	border-radius: 2px;
+	font-size: 15px;
+	width: 15px;
+	background-color: white;
+	color: black;
+}
+
+
+.design {
+	width: 60px;
+	background-color: #3CB371;
+	
+}
+
+.impl {
+	width: 140px;
+	background-color:#FF7F50;
+}
+.testing {
+	width: 70px;
+	background-color: #DC143C;
+}

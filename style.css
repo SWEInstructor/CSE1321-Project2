@@ -25,6 +25,13 @@
 	padding-left: 150px;
 	margin-top: 85px;
 }
+.div-timeline-page {
+	width: 1150px;
+	padding-left: 150px;
+}
+.timeline-title {
+	margin-bottom: 100px;
+}
 table {
 	table-layout: fixed;
 }

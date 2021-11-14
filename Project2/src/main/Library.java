@@ -18,12 +18,15 @@ public class Library {
 	}
 	
 	public static void libraryFront (String NAME) {
-		String [] inputs = {"visit", "use", "look", "check inventory", "help"};
-		System.out.println(NAME + " walks into the library.");
-		System.out.println("So what are you doing while you're in here?: ");
-		String command = TextGame.checkInput(inputs);
+		String command = " ";
 		String place = "";
-		do{
+		String [] inputs = {"visit", "use", "look", "check inventory", "help"};
+		while(!command.equals("visit"){
+			System.out.println(NAME + " walks into the library.");
+			System.out.println("So what are you doing while you're in here?: ");
+			command = TextGame.checkInput(inputs);
+			
+		
 			if(command.equals("visit")){
 				TextGame.visit(place);
 			} else if(command.equals("help")){
@@ -46,44 +49,46 @@ public class Library {
 					System.out.println(NAME + " starts skimming through the books yet again, because they can't be bothered to actually read.");
 				}
 			}
-		}while(!(command.equals("use")) || !(command.equals("visit")));
+		}	
+		
 	}
 	
 	public static void libraryBack(String NAME) {
-	  	String [] inputs = {"visit", "use", "look", "check inventory", "help"};
-		System.out.println(NAME + " made it to the back of the Library");
-		System.out.println("What does" + NAME + "wanna do?!");
-		String command = TextGame.checkInput(inputs);
+        	String command = " ";
 		String place = " ";
-		do{
-			if(command.equals("visit")){
-				TextGame.visit(place);
-			} else if(command.equals("help")){
-				TextGame.help();
-			} else if(command.equals("check inventory")){
-				Inventory.checkInv(NAME);
-			} else if(command.equals("look")){
-				System.out.println(NAME + "looks around and spots more books (it's like you're in library or something), a chair, and a map on a table.");
-			} else if(command.equals("use")){
-				System.out.println("What is " + NAME + "going to use" );
-				if(!(Inventory.hasItem("map"))){
-					String [] librarybackObjects = {"chair", "map", "books"};
-					command = TextGame.checkInput(librarybackObjects);
-				} else if(Inventory.hasItem("map")){
-					String [] librarybackObjects = {"chair", "books"};
-					command = TextGame.checkInput(librarybackObjects);
-				}
-			}
-		}while(!(command.equals("use")) || !(command.equals("visit")));
-		
-		if(command.equals("chair")){
-			System.out.println(NAME + "sits down in the chair....lame");
-		} else if(command.equals("books")){
-			System.out.println(NAME + "opens a book, HOW EXCITING! (◔_◔)");
-		} else if(command.equals("map")){
-			if(!(Inventory.hasItem("real map"))){
-				Inventory.addItemToInv("real map", NAME);
-			}
-		}
-	}
+        	String[] inputs = {"visit", "use", "look", "check inventory", "help"};
+       		while (!command.equals("visit")) {
+            		System.out.println(NAME + " made it to the back of the Library");
+            		System.out.println("What does" + NAME + "wanna do?!");
+            		command = TextGame.checkInput(inputs);
+            	
+            		if (command.equals("visit")) {
+                		TextGame.visit(place);
+            		} else if (command.equals("help")) {
+                		TextGame.help();
+            		} else if (command.equals("check inventory")) {
+                		Inventory.checkInv(NAME);
+            		} else if (command.equals("look")) {
+                		System.out.println(NAME + "looks around and spots more books (it's like you're in library or something), a chair, and a map on a table.");
+            		} else if (command.equals("use")) {
+                		System.out.println("What is " + NAME + "going to use");
+                		if (!(Inventory.hasItem("map"))) {
+                    			String[] librarybackObjects = {"chair", "map", "books"};
+                    			command = TextGame.checkInput(librarybackObjects);
+                		} else if (Inventory.hasItem("map")) {
+                    			String[] librarybackObjects = {"chair", "books"};
+                    			command = TextGame.checkInput(librarybackObjects);
+                    			if(command.equals("chair")) {
+                        			System.out.println(NAME + "sits down in the chair....lame");
+                    			} else if (command.equals("books")) {
+                        			System.out.println(NAME + "opens a book, HOW EXCITING! (◔_◔)");
+                    			} else if (command.equals("map")) {
+                        			if (!(Inventory.hasItem("real map"))) {
+                            				Inventory.addItemToInv("real map", NAME);
+                        }
+                    }
+                }
+            } 
+        }
+    }
 }

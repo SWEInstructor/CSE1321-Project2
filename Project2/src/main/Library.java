@@ -80,7 +80,7 @@ public class Library {
                 		} else if (Inventory.hasItem("map")) {
                     			String[] librarybackObjects = {"chair", "books"};
                     			usecommand = TextGame.checkInput(librarybackObjects);
-                    			if(command.equals("chair")) {
+                    			if(usecommand.equals("chair")) {
                         			System.out.println(NAME + "sits down in the chair....lame");
                     			} else if (usecommand.equals("books")) {
                         			System.out.println(NAME + "opens a book, HOW EXCITING! (◔_◔)");

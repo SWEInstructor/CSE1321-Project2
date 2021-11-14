@@ -55,6 +55,7 @@ public class Library {
 	
 	public static void libraryBack(String NAME) {
         	String command = " ";
+		String usecommand = " ";
 		String place = " ";
         	String[] inputs = {"visit", "use", "look", "check inventory", "help"};
        		System.out.println(NAME + " made it to the back of the Library");
@@ -75,15 +76,15 @@ public class Library {
                 		System.out.println("What is " + NAME + "going to use");
                 		if (!(Inventory.hasItem("map"))) {
                     			String[] librarybackObjects = {"chair", "map", "books"};
-                    			command = TextGame.checkInput(librarybackObjects);
+                    			usecommand = TextGame.checkInput(librarybackObjects);
                 		} else if (Inventory.hasItem("map")) {
                     			String[] librarybackObjects = {"chair", "books"};
-                    			command = TextGame.checkInput(librarybackObjects);
+                    			usecommand = TextGame.checkInput(librarybackObjects);
                     			if(command.equals("chair")) {
                         			System.out.println(NAME + "sits down in the chair....lame");
-                    			} else if (command.equals("books")) {
+                    			} else if (usecommand.equals("books")) {
                         			System.out.println(NAME + "opens a book, HOW EXCITING! (◔_◔)");
-                    			} else if (command.equals("map")) {
+                    			} else if (usecommand.equals("map")) {
                         			if (!(Inventory.hasItem("real map"))) {
                             				Inventory.addItemToInv("real map", NAME);
                         }

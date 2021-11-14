@@ -22,7 +22,7 @@ public class Library {
 		String place = "";
 		String [] inputs = {"visit", "use", "look", "check inventory", "help"};
 		System.out.println(NAME + " walks into the library.");
-		while(!command.equals("visit"){
+		while(!command.equals("visit") || !command.equals("use")){
 			System.out.println("So what are you doing while you're in here?: ");
 			command = TextGame.checkInput(inputs);
 			
@@ -58,7 +58,7 @@ public class Library {
 		String place = " ";
         	String[] inputs = {"visit", "use", "look", "check inventory", "help"};
        		System.out.println(NAME + " made it to the back of the Library");
-		while (!command.equals("visit")) {
+		while (!command.equals("visit") || !command.equals("use")) {
             		
             		System.out.println("What does" + NAME + "wanna do?!");
             		command = TextGame.checkInput(inputs);

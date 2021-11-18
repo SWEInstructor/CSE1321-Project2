@@ -1,3 +1,4 @@
+package ClassProject2;
 
 public class FriendsHouse {
 	

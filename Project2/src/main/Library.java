@@ -7,9 +7,9 @@ public class Library {
 		System.out.println(NAME + " is at the library entrance right now");
 		System.out.println(NAME + " was thinking of checking out the Library to see if any useful information will be there and if the library has any new comics!");
 		System.out.println("Narrator: " + NAME + " needs a Library Pass to enter the back section." + NAME +" remembers what happened last time someone forgot it and they lost their pants!!");
-		System.out.println( "What will " + NAME + " do next? Right now it seems like they're just going to stand there like a statue, apparently");
+		System.out.println( "What will " + NAME + " do next? Right now it seems like they're just going to stand there like a statue, apparently." + NAME + " could totally go inside if they decided to ''use the door''");
 		String input = sc.nextLine();
-		if(input.equalsIgnoreCase("libraryEntrance")) {
+		if(input.equalsIgnoreCase("use the door")) {
 			 command = " ";
 			String place = "";
 			//String [] inputs = {"visit", "use", "look", "inventory", "help"};

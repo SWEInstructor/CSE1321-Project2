@@ -1,12 +1,10 @@
 
 public class Home {
 
-	public void Home1(String NAME, String PLACE, String command, String[] inputs)
-	{
+	public void Home1(String NAME, String PLACE, String command, String[] inputs) {
 		
 		do {
-		
-		
+			
 			if (PLACE == "home") {
 				
 				System.out.println(NAME + " is at their home... It's a dump.");

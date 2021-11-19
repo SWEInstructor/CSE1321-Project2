@@ -1,4 +1,4 @@
-package classProject2;
+package ClassProject2;
 import java.util.Scanner;
 
 public class Library {

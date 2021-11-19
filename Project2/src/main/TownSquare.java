@@ -1,21 +1,22 @@
-package main;
+package classProject2;
 
 public class TownSquare {
 	
-	public static void townSquare(String NAME, String place, String command, String[] inputs)
+	public int townSquare(String NAME, String place, String command, String[] inputs)
 	{
 		if (place.equals("townSquare")){
 			System.out.println("You walk into the town square and see a farmer's stand and a flower stall.");
+			while(!command.equals("visit") || !command.equals("use")){
 			System.out.println("So, what are you doing now?: ");
 
-			command = TextGame.checkInput(inputs);
+			command = Textgame.checkInput(inputs);
 
 			if (command.equals("visit")){
-				TextGame.visit(place);
+				Textgame.visit(place);
 			}
 
 			if (command.equals("help")) {
-				TextGame.help();
+				Textgame.help();
 			}
 
 			if (command.equals("look"))  {
@@ -27,7 +28,7 @@ public class TownSquare {
 				String action1;
 				System.out.println("Which one would you like to go to?: ");
 				String[] squareOptions = {"farmer's stand", "flower stall", "friend's house"};
-				action1 = TextGame.checkInput(squareOptions);
+				action1 = Textgame.checkInput(squareOptions);
 				if (action1 == "farmer's stand")
 				{
 					System.out.println("You see the fruits and veggies the stand has but you're too broke to afford any of it.");
@@ -39,9 +40,9 @@ public class TownSquare {
 		      	}
 
 		      	if (command == "check inventory")   {
-				Inventory.checkInv(NAME);
+				Inventory.checkInv();
 	    		}
-
+			}
 	    	}
-	}
-}
+	return 1;
+	}}

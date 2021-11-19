@@ -1,11 +1,14 @@
-package main;
+package classProject2;
+
 import java.util.ArrayList;
 
 public class Inventory {
-	public static ArrayList<String> inventory = new ArrayList<String>();
+public static ArrayList<String> inventory = new ArrayList<String>();
 	
-	public static void checkInv(String NAME){
-		System.out.print(NAME + " has ");
+	public static int checkInv(){
+		
+		Textgame.getName();
+		System.out.print(" has ");
 		if (inventory.size() <= 1) {
 			if (inventory.size() == 1) {
 				System.out.println(inventory.get(0) + ".");
@@ -21,14 +24,22 @@ public class Inventory {
 			System.out.print(inventory.get(inventory.size() - 2) + " and " + 
 			inventory.get(inventory.size() - 1));
 		}
+	return 1;
 	}
 	
-	public static void addItemToInv(String item, String NAME){
+	public static int addItemToInv(String item){
+		 Textgame.getName();
+		
+		
 		if(hasItem(item));
 		else {
 			inventory.add(item);
-			System.out.println(item + " has been added to " + NAME + "'s inventory.");
+			System.out.println(item + " has been added to " ); 
+			Textgame.getName();
+					
+			System.out.println	(	 "'s inventory.");
 		}
+	return 1;
 	}
 	
 	public static boolean hasItem(String item){
@@ -40,10 +51,12 @@ public class Inventory {
 		return false;
 	}
 	
-	public static void RemoveInventory(String item){
+	public static int RemoveInventory(String item){
 		inventory.remove(item);
+		return 1;
 	}
-	public static void ClearInventory() {
+	public static int ClearInventory() {
 		inventory.removeAll(inventory);
+		return 1;
 	}
 }

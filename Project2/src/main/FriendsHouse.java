@@ -1,26 +1,26 @@
-package main;
+package classProject2;
 
 public class FriendsHouse {
-
 	static String[] friendsHouseObjects = {
 			"dresser", "plant", "door"
 		};
 	
 	
-	static void Houseinit() {
+	static int Houseinit() {
 		String PLACE = "friendsHouse";
 		System.out.println("You walk into your friend's house.");
 		System.out.println("What are you even doing in here?: ");
+		return 1;
 	}
 	
-	static void HouseMain(String NAME, String[] inputs){
+	int HouseMain(String NAME, String[] inputs){
 		String PLACE = "friendsHouse";
 		
-		String command = TextGame.checkInput(inputs);
+		String command = Textgame.checkInput(inputs);
 		switch (command) {
 			case "use":
 				System.out.println("What are you going to use: ?");
-				command = TextGame.checkInput(friendsHouseObjects);
+				command = Textgame.checkInput(friendsHouseObjects);
 				
 				switch (command) {
 					case "dresser":
@@ -36,7 +36,9 @@ public class FriendsHouse {
 								+ "ed it's fake.");
 					case "door":
 						System.out.println("You exit into the townSquare.");
-						TownSquare.townSquare(NAME, PLACE, command, inputs);
+						//TownSquare.townSquare(NAME, PLACE, command, inputs);
+						//TownSquare town = new TownSquare();
+						//town.townSquare(NAME,  PLACE,  command, inputs);
 					default:
 						HouseMain(NAME, inputs);
 				}
@@ -49,17 +51,19 @@ public class FriendsHouse {
 				break;
 				
 			case "visit":
-				TextGame.visit(NAME);
+				Textgame.visit(NAME);
 				break;
 				
 			case "check inventory":
-				Inventory.checkInv(NAME);
+				Inventory.checkInv();
 				break;
 				
 			case "help":
-				TextGame.help();
+				Textgame.help();
 				break;				
 		}
 		HouseMain(NAME, inputs);
+	return 1;
 	}
 }
+

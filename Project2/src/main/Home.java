@@ -1,3 +1,4 @@
+
 package classProject2;
 
 public class Home {
@@ -107,5 +108,6 @@ public class Home {
 	}while(!command .equals ("cavePassage"));
 		
 	return 1;
+
 	}
 }

@@ -1,4 +1,4 @@
-package ClassProject2;
+package gameObjects;
 
 public class FriendsHouse {
 	

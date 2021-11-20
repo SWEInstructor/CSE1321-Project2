@@ -167,9 +167,9 @@ else if (PLACE .equals ("friendsHouse")) {
 			
 			
 		case "friendsHouse" : 
-			System.out.println(NAME+" decides that apparently they are super human, and attempts to walk through the wall, "+
+		/*	System.out.println(NAME+" decides that apparently they are super human, and attempts to walk through the wall, "+
 					"only to realize that they have nto spontaneously become able to do such a thing. They should really try to use the PASSAGE "+
-					"that they used to get in here in the first place.");
+					"that they used to get in here in the first place.");*/
 			
 			place = "friendsHouse";
 			FriendsHouse friend = new FriendsHouse();

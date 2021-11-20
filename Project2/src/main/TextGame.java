@@ -1,4 +1,3 @@
-package gameObjects;
 
 import java.util.Scanner;
 

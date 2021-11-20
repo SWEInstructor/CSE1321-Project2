@@ -322,9 +322,9 @@ public static void main (String args[]) {
 		String[] options ;
 		System.out.print("Do you want to control the life of a college student user again? Enter Y for yes and N for no.");
 		String gamePlay = sc.next();
-		if (gamePlay.equals("Y")) {
+		if (gamePlay.equalsIgnoreCase("Y")) {
 			play = true;
-		} else if(gameplay.equals("N")) {
+		} else if(gameplay.equalsIgnoreCase("N")) {
 			play = false;
 		}
 		

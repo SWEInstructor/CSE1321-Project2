@@ -1,4 +1,4 @@
-package ClassProject2;
+package gameObjects;
 import java.util.Scanner;
 
 public class Library {

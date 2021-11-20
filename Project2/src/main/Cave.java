@@ -1,4 +1,4 @@
-package classProject2;
+package gameObjects;
 
 import java.util.Random;
 import java.util.Scanner;

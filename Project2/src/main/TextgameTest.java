@@ -9,7 +9,7 @@ class TextgameTest {
 	@Test
 	void testCheckInput() {
 		Textgame myObject = new Textgame();
-		String[] inputs = {"Car", "truck", "motorcycle", "vehicle", "plane"};
+		String[] inputs = {"use", "look", "check inventory", "help", "visit"};
 		String result = myObject.checkInput(inputs);
 		boolean correct = false;
 		for(int i =0; i<inputs.length; i++) {
